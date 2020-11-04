@@ -1,0 +1,54 @@
+<html>
+    <head>
+       <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        
+          <div id="changeWordModal" class="modalContainer">
+                <div class="modalContent">
+                    <div><h2 id="newWordConfirm"></h2></div>
+                        <div id="entry-box-cont">
+                            <label for="newWord"></label>
+                            <input type="text" id="newWord" value="" onfocus="if(this.value == 'Add a new word') { this.value = ''; }" value="value" />
+                        <div class="closeAddWordButtonHolder">
+                            <button id="addWordButton" class="button">Add Word</button>
+                        </div>
+                        <div class="closeAddWordButtonHolder">
+                         <button id="closeModal" class="button">Done</button>
+                        </div>
+                        </div>
+                   </div>
+            </div>
+        
+        <div class="mainContainer">
+            <div class="gameInfoContainer">
+                <h1><span class="gameName">Tic Tac Words</span></h1>
+                <h1 id="message">X's turn</h1>
+            </div>
+            
+            <div class="boardContainer">
+                <div id="gameBoard">
+            </div>
+        
+            <div id="buttonHolder">
+                <button id="resetBtn" class="button">Reset game</button>
+                <button id="changeWords" class="button">Change Words</button>
+                <button id="aboutBtn" class="button">How to Play</button>
+                    <div id ="aboutModal" class="modalContainer">
+                        <div class="modalContent">
+                            <h1><span class="gameName">Tic Tac Words</h1>
+                            <p>The classic tic tac toe (UK: noughts and crosses) game for two English as Second Language (ESL) students. Students pick a word and use it in a full sentence.<br><br> The online ESL teacher clicks the square to fill it with X or 0. Teachers can add target vocabulary using the 'change words' button.
+                            </p>
+                            <button id="closeAbout" class="button">Close</button>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <script src="index.pack.js"></script>
+    </body>
+</html>
+
+<!-- <div id="astrixModal">
+                   c
+                    <div> -->

@@ -1,0 +1,218 @@
+body {
+    font-family: 'Balsamiq Sans', cursive;
+    margin: 0 auto;
+    font-size: 1.125rem;
+    /* 1.125 * 16 px (default)= 18px */
+    --color-1: #cac0baff;
+    --color-2: #f5f8ddff;
+    --color-3: #e0c8bdff;
+    --color-4: #ab727aff;
+    --color-5: #62374bff;
+}
+
+/* Typography */
+
+h1 {
+    font-size: 3.5rem;
+    /* This is 3.5 times the font size of the root 1.125rem = 60px*/
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+p {
+    font-size: 1.6rem;
+}
+
+#subTitle {
+    padding: 0.5em;
+}
+
+.gameName {
+    text-decoration: underline;
+}
+
+.winDrawText {
+    color: var(--color-5);
+    animation-name: blinkText;
+    animation-duration: 2s;
+}
+
+@keyframes blinkText {
+    from {color: var(--color-1);}
+    to {color: var(--color-5);}
+}
+
+/* Modal */
+
+.modalContainer {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* dims the background when the modal is active */
+}
+
+.modalContent {
+  padding: 6em;
+  background: grey;
+  border: solid darkgray .4rem;
+  max-width: 50%;
+}
+
+#newWord{
+    font-size: 1.6rem;
+}
+
+#newWordConfirm {
+    display: flex;
+    justify-content: center;
+}
+
+.mainContainer {
+    display: block;
+    border: var(--color-4) groove .5em;
+    background: var(--color-2);
+    background-image: linear-gradient(12deg, var(--color-1) , var(--color-3));
+    width: 95%;
+    max-width: 980px;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#entry-box-cont {
+    justify-content: space-between;
+}
+
+
+.boardContainer {
+    margin: 1em;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Buttons */
+
+#buttonHolder {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1.4em 0em 0em 0em;
+}
+
+.button {
+    font-family: 'Balsamiq Sans', cursive;
+    font-size: 2rem;
+    padding: 0.4em 0.4em;
+    border: solid var(--color-5); 
+    border-radius: 0.8em;
+    padding: .5em;
+}
+
+.button:hover {
+    background-color: var(--color-3);
+    cursor: pointer;
+}
+
+#addWordButton,
+#closeModal {
+    padding: 0.15em 0.15em;
+}
+
+.closeAddWordButtonHolder {
+    padding: 1em 1em;
+    display: flex;
+    justify-content: center;
+}
+
+#closeModal {
+    justify-content: center;
+}
+
+.resetNow {
+    background: var(--color-4);
+}
+
+#gameBoard {
+    display: grid;
+    justify-items: stretch;
+    align-items: stretch;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 33% 33% 33%;
+    grid-column-gap: 0.5rem;
+    grid-row-gap: 0.5rem;
+}
+
+.gameSq {
+    background: var(--color-2);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    border-radius: 0.5em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color: black;
+    font-size: 2.2rem;
+    padding: 1.2em 1.2em;
+    text-align: center;
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+    .gameSq {
+        font-size: 1.8rem;
+    }
+    h1 {
+        font-size: 3rem;
+    }
+    h2 {
+    font-size: 2rem;
+    }
+    #newWord{
+    font-size: 1.2rem;
+    }
+    .button{
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 599px) {
+    .gameSq {
+        font-size: 1.2rem;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+      h2 {
+    font-size: 1.6rem;
+    }
+    .button{
+        font-size: 1.2rem;
+    }
+}
+
+.gameSq:hover {
+    background-color: var(--color-3);
+    cursor: pointer;
+}
+
+
+.player1Filled {
+    background-color: var(--color-4) !important;
+    cursor: default !important;
+}
+
+.player2Filled {
+    background-color: var(--color-5) !important;
+    cursor: default !important;
+}
+
+
+/* /* .modalContainer {
+    
+} */
